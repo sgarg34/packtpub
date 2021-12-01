@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Packhub\Pack;
 
+use URL;
+
 class HomeController extends Controller
 {
 
@@ -56,7 +58,7 @@ class HomeController extends Controller
             $result = $this->pack->getAPI('api/v1/products?limit=8&page='.$page);
 
             foreach ($result->products as $book) {
-                $html.='<div class = "col-md-3"> <h3>'.$book->title .'</h3><a href= ""><button type = "button" class = "btn btn-info">Browse</button></a></div>';
+                $html.='<div class = "col-md-3"> <h3>'.$book->title .'</h3><a href= /getRecordDetails/'.$book->id.'><button type = "button" class = "btn btn-info">Browse</button></a></div>';
             }
 
             return $html;
