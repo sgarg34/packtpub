@@ -23,6 +23,6 @@
         </nav>
     </header>
     @yield('content')
-<script src="{{ (env('APP_ENV')==='dev') ? secure_asset('assets/js/custom.js') :  asset('assets/js/custom.js') }}"></script>    
+<script src="{{ (env('APP_ENV')==='local') ? asset('assets/js/custom.js') :  secure_asset('assets/js/custom.js') }}"></script>    
 </body>
 </html>   

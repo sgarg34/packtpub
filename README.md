@@ -81,6 +81,10 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <code>cp .env.example .env</code>
 <code>php artisan key:generate</code>
 
+## Enviroment Settings
+APP_ENV=local
+APP_ENV=dev
+
 ## Website Link
 
 <a href="https://packhub.herokuapp.com/">Packt</a>
