@@ -1,7 +1,9 @@
 @extends('layouts.header')
 @section('content')
     <main class="flex-shrink-0">
-    
+        <div class="container">
+            
+        </div>
         <div class="text-center m-3">
             <div class = "row books">
             @if(!empty($bookData))
@@ -18,9 +20,10 @@
             
             </div>
             <button class="btn btn-primary" id="load-more" data-paginate="{{ $bookData->current_page+1 }}">Load more...</button>
-            @endif
+            @else
             
-            <p class="invisible">No more posts...</p>
+            <p class="invisible">No More Books available at store</p>
+            @endif
         </div>
     </main>
 @endsection
