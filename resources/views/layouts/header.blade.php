@@ -11,18 +11,18 @@
     </style>
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Fixed navbar</a>
+                <a class="navbar-brand" href="#">Packt</a>
             </div>
         </nav>
     </header>
     @yield('content')
-<script src="{{ asset('assets/js/custom.js') }}"></script>    
+<script src="{{ (env('APP_ENV')==='dev') ? secure_asset('assets/js/custom.js') :  asset('assets/js/custom.js') }}"></script>    
 </body>
 </html>   
